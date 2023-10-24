@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <p class="title">CSS Flexbox Layout</p>
+  <p class="intro">This is a comprehensive guide to the CSS flex system. It will go over the various properties, how to
+    use them, and maybe some edge-cases too. Use the navigation bar to quickly find what you're looking for!</p>
+
+  <!-- FLEX DIRECTION -->
+
+  <div id="flex-direction" class="section">
+
+    <p class="heading">flex property needs to be applied to the container</p>
+    <hr>
+    <p class="sub-heading">There are various flex-direction options, such as: </p>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">row</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: items contained in this div will be aligned into <span
+          style="font-weight: bold;">ROWS</span></p>
+      <div class="flex-container row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">b) <span style="font-weight: bold;">column</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: items contained in this div will be aligned into <span
+          style="font-weight: bold;">COLUMNS</span></p>
+      <div class="flex-container column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">c) <span style="font-weight: bold;">reverse-column (applies to rows too)</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: items contained in this div will be aligned into <span
+          style="font-weight: bold;">COLUMNS</span> but in reverse order</p>
+      <div class="flex-container column-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLEX WRAP -->
+
+  <div id="flex-wrap" class="section">
+    <p class="heading">You can also use flex-wrap, to indicate whether items should wrap if necessary. Alternatively,
+      '<span style="font-weight: bold;">nowrap</span>' to prevent this, as shown below:</p>
+    <hr>
+    <p class="sub-heading">There are various flex-wrap options too, such as: </p>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">flex-wrap ENABLED</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: on re-size the elements <span
+          style="font-weight: bold;">DO</span> re-align themselves</p>
+
+      <div class="flex-container wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+
+    <div class="example" class="section">
+      <p class="sub-heading">b) <span style="font-weight: bold;">we can also use wrap-reverse</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: this will wrap elements in the same way as wrap, but
+        starting with the <span style="font-weight: bold;">LAST</span> element instead of the <span
+          style="font-weight: bold;">FIRST</span></p>
+
+      <div class="flex-container reverse-wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+
+
+    <div class="example">
+      <p class="sub-heading">c) <span style="font-weight: bold;">flex-wrap DISABLED</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: on re-size the elements do <span
+          style="font-weight: bold;">NOT</span> re-align themselves</p>
+
+      <div class="flex-container no-wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLEX FLOW -->
+
+  <div id="flex-flow" class="section">
+    <p class="heading">There is also a
+      <span style="font-weight: bold;">flex-flow</span> property, which is a shorthand for the <span
+        style="font-weight: bold;">flex-direction</span> and <span style="font-weight: bold;">flex-wrap</span>
+      properties
+    </p>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">flex-flow: row wrap</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: these settings will cause the contained elements to have
+        a flex direction of <span style="font-weight: bold;">ROW</span> and they <span
+          style="font-weight: bold;">WILL</span> wrap upon resize</p>
+
+      <div class="flex-container flex-flow-row-wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">b) <span style="font-weight: bold;">flex-flow: row nowrap</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: these settings will cause the contained elements to have
+        a flex direction of <span style="font-weight: bold;">ROW</span> and they will <span
+          style="font-weight: bold;">NOT</span> wrap upon resize</p>
+
+      <div class="flex-container flex-flow-row-nowrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">c) <span style="font-weight: bold;">flex-flow: row wrap-reverse</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: these settings will cause the contained elements to have
+        a flex direction of <span style="font-weight: bold;">ROW</span> and they will wrap in <span
+          style="font-weight: bold;">REVERSE</span></p>
+
+      <div class="flex-container flex-flow-row-wrap-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JUSTIFY CONTENT -->
+
+  <div id="justify-content" class="section">
+    <p class="heading">The
+      <span style="font-weight: bold;">justify-content</span> property is used to align the flex items in their
+      respective container
+    </p>
+    <hr>
+    <p class="sub-heading">These are some commonly used <span style="font-weight: bold;">justify-content</span> values:
+    </p>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">justify-content: center</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: aligns the flex elements at the <span
+          style="font-weight: bold;">CENTER </span> of their container</p>
+
+      <div class="flex-container justify-center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">justify-content: flex-start</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: aligns the flex elements at the <span
+          style="font-weight: bold;">BEGINNING </span> of their container</p>
+
+      <div class="flex-container justify-start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">justify-content: flex-end</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: aligns the flex elements at the <span
+          style="font-weight: bold;">END </span> of their container</p>
+
+      <div class="flex-container justify-end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">justify-content: space-around</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: displays the flex element with space <span
+          style="font-weight: bold;">BEFORE, BETWEEN, </span> and <span style="font-weight: bold;">AFTER</span> the
+        lines</p>
+
+      <div class="flex-container justify-space-around">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">justify-content: space-around</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: displays the flex element with space <span
+          style="font-weight: bold;">BETWEEN</span> the lines</p>
+
+      <div class="flex-container justify-space-between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALIGN ITEMS -->
+
+  <div id="align-items" class="section">
+    <p class="heading">The
+      <span style="font-weight: bold;">align-items</span> property is used to align the flex items
+    </p>
+    <hr>
+    <p class="sub-heading">These are some commonly used <span style="font-weight: bold;">align-items</span> values:
+    </p>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">align-items: center</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: aligns the flex elements at the <span
+          style="font-weight: bold;">MIDDLE </span> of their container</p>
+
+      <div class="flex-container align-center ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">align-items: flex-start</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: aligns the flex elements at the <span
+          style="font-weight: bold;">TOP </span> of their container</p>
+
+      <div class="flex-container align-start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">align-items: flex-end</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: aligns the flex elements at the <span
+          style="font-weight: bold;">END </span> of their container</p>
+
+      <div class="flex-container align-end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">align-items: baseline</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: aligns the flex elements such as their <span
+          style="font-weight: bold;">BASELINES </span> line up, which are the invisible lines that letters rest on</p>
+
+      <div class="flex-container align-baseline">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ALIGN CONTENT -->
+
+  <div id="align-items" class="section">
+    <p class="heading">The
+      <span style="font-weight: bold;">align-items</span> property is used to align the flex items
+    </p>
+    <hr>
+    <p class="sub-heading">These are some commonly used <span style="font-weight: bold;">align-items</span> values:
+    </p>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">align-items: center</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: aligns the flex elements at the <span
+          style="font-weight: bold;">MIDDLE </span> of their container</p>
+
+      <div class="flex-container align-content-container align-content-center ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

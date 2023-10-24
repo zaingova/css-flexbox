@@ -342,24 +342,103 @@
 
   <div id="align-items" class="section">
     <p class="heading">The
-      <span style="font-weight: bold;">align-items</span> property is used to align the flex items
+      <span style="font-weight: bold;">align-content</span> property is used to align the flex lines
     </p>
     <hr>
-    <p class="sub-heading">These are some commonly used <span style="font-weight: bold;">align-items</span> values:
+    <p class="sub-heading">These are some commonly used <span style="font-weight: bold;">align-content</span> values:
     </p>
 
     <div class="example">
       <p class="sub-heading">a) <span style="font-weight: bold;">align-items: center</span></p>
-      <p style="font-style: italic;" class="sub-heading">note: aligns the flex elements at the <span
-          style="font-weight: bold;">MIDDLE </span> of their container</p>
+      <p style="font-style: italic;" class="sub-heading">note: displays the flex lines in the <span
+          style="font-weight: bold;">MIDDLE </span> of the container</p>
 
       <div class="flex-container align-content-container align-content-center ">
         <div>1</div>
         <div>2</div>
         <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
       </div>
     </div>
 
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">align-items: space-around</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: displays the flex lines in the space <span
+          style="font-weight: bold;">BEFORE, BETWEEN, </span> and <span style="font-weight: bold;">AFTER</span> them</p>
+
+      <div class="flex-container align-content-container align-content-around ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">align-items: space-between</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: displays the flex lines with <span
+          style="font-weight: bold;">EQUAL </span> space between them</p>
+
+      <div class="flex-container align-content-container align-content-between ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <p class="sub-heading">a) <span style="font-weight: bold;">align-items: stretch</span></p>
+      <p style="font-style: italic;" class="sub-heading">note: stretches the flex lines to take up the remaining space
+        (default setting)
+      </p>
+
+      <div class="flex-container align-content-container align-content-stretch ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERFECT CENTERING -->
+
+  <div id="align-items" class="section">
+    <p class="heading">How to
+      <span style="font-weight: bold;">perfectly center</span> an element:
+    </p>
+    <hr>
+    <p class="sub-heading">Set both the <span style="font-weight: bold;">justify-content</span> and <span
+        style="font-weight: bold;">align-items</span> properties to center, and the flex item will be perfectly centered
+    </p>
+
+    <div class="example">
+
+      <div class="centered-item-container">
+        <div class="centered-item"></div>
+      </div>
+    </div>
   </div>
 
 </body>

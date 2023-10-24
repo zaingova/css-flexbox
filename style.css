@@ -104,6 +104,22 @@
   align-content: center;
 }
 
+/* centering element example class */
+.centered-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: dodgerblue;
+}
+
+.centered-item {
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
 /* -------------------------------------------------------- */
 /* heading and standard element styling */
 .title {
@@ -175,6 +191,10 @@ div.flex-container.align-center,
 div.flex-container.align-start,
 div.flex-container.align-end {
   height: 10rem;
+}
+
+div.flex-container.align-content-container {
+  height: 20rem;
 }
 
 .flex-container div {
